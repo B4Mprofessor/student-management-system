@@ -61,7 +61,10 @@ Ensure code quality and consistency by running:
 npm run lint
 Project Structure
 plaintext
-Copy code
+
+## Project Structure
+
+```plaintext
 student-management-system/
 ├── .gitignore
 ├── package.json
@@ -75,10 +78,12 @@ student-management-system/
 │   ├── components/
 │   │   ├── FilterDropdown.jsx
 │   │   ├── StudentForm.jsx
-│   │   └── StudentTable.jsx
+│   │   ├── StudentTable.jsx
+│   │   └── SearchBar.jsx
 │   ├── styles/
 │   └── utils/
 │       └── helper.js
+
 public/: Static assets like icons, images.
 src/: Contains the core application code including components, styles, and utility functions.
 License
