@@ -18,9 +18,9 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* button:hover {
   background-color: #e53e3e;
-}
+} */
 
 /* Modal styling */
 .fixed {
@@ -142,24 +142,7 @@ textarea:focus {
   background-position: right 0.5rem center;
   background-size: 1.5rem 1.5rem;
   padding-right: 2.5rem;
-}
-
-.custom-dropdown {
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23667EEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 1.5rem 1.5rem;
-  padding-right: 2.5rem;
-}
-.custom-dropdown {
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23667EEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 1.5rem 1.5rem;
-  padding-right: 2.5rem;
-  text-align: center;
+  text-align: center; /* Center-align the text */
 }
 
 .custom-dropdown option:hover {
@@ -169,4 +152,51 @@ textarea:focus {
 
 .custom-dropdown option:checked {
   color: #4a5568;
+}
+
+/* Custom styles for the edit button */
+.edit-button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: #4a90e2; /* Blue text color */
+  border: 1px solid #4a90e2; /* Blue border */
+  border-radius: 0.25rem;
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #4a90e2; /* Blue background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Custom styles for the delete button */
+.delete-button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: #e53e3e; /* Red text color */
+  border: 1px solid #e53e3e; /* Red border */
+  border-radius: 0.25rem;
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e53e3e; /* Red background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Custom styles for the "Delete all records" button */
+.delete-all-button {
+  padding: 0.25rem 0.5rem; /* Smaller padding */
+  font-size: 0.875rem; /* Smaller font size */
+  background-color: #e53e3e; /* Red background color */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 0.25rem; /* Small border radius */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-all-button:hover {
+  background-color: #c53030; /* Darker red on hover */
 }
