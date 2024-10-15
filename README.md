@@ -82,3 +82,8 @@ student-management-system/
 │   ├── styles/
 │   └── utils/
 │       └── helper.js
+
+
+public/: Static assets like icons, images.
+src/: Contains the core application code including components, styles, and utility functions.
+components/: Includes FilterDropdown, StudentForm, StudentTable, and SearchBar for searching and filtering student data.
