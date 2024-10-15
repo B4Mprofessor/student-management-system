@@ -16,17 +16,24 @@ const App = () => {
     direction: "ascending",
   });
 
+  // Load students from local storage on initial load (only runs once)
   useEffect(() => {
     const storedStudents = JSON.parse(localStorage.getItem("students") || "[]");
-    setStudents(storedStudents);
-    setFilteredStudents(storedStudents);
+    if (storedStudents.length > 0) {
+      setStudents(storedStudents);
+      setFilteredStudents(storedStudents);
+    }
   }, []);
 
+  // Save students to local storage whenever the students state changes
   useEffect(() => {
-    localStorage.setItem("students", JSON.stringify(students));
+    if (students.length > 0) {
+      localStorage.setItem("students", JSON.stringify(students));
+    }
     filterAndSortStudents();
   }, [students]);
 
+  // Filter and sort students whenever search term, filter status, or sorting changes
   useEffect(() => {
     filterAndSortStudents();
   }, [searchTerm, filterStatus, sortConfig]);
