@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Add any additional global styles here */
+
 body {
   font-family: "Inter", sans-serif;
 }
