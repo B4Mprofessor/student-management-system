@@ -44,7 +44,7 @@ const StudentForm = ({ addStudent, updateStudent, editingStudent }) => {
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-700 mb-2"
         >
           Name
         </label>
@@ -61,7 +61,7 @@ const StudentForm = ({ addStudent, updateStudent, editingStudent }) => {
       <div>
         <label
           htmlFor="age"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-700 mb-2"
         >
           Age
         </label>
@@ -78,7 +78,7 @@ const StudentForm = ({ addStudent, updateStudent, editingStudent }) => {
       <div>
         <label
           htmlFor="grade"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-700 mb-2"
         >
           Grade
         </label>

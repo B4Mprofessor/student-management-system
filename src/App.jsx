@@ -4,6 +4,7 @@ import StudentForm from "./components/StudentForm";
 import SearchBar from "./components/SearchBar";
 import FilterDropdown from "./components/FilterDropdown";
 import { generateUniqueId } from "./utils/helper";
+import "./styles/index.css"; // Ensure you import your CSS file
 
 const App = () => {
   const [students, setStudents] = useState([]);
@@ -15,6 +16,7 @@ const App = () => {
     key: null,
     direction: "ascending",
   });
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const storedStudents = JSON.parse(localStorage.getItem("students") || "[]");
@@ -88,6 +90,16 @@ const App = () => {
     setSortConfig({ key, direction });
   };
 
+  const clearAllStudents = () => {
+    setShowModal(true);
+  };
+
+  const confirmClearAllStudents = () => {
+    setStudents([]);
+    localStorage.removeItem("students");
+    setShowModal(false);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative px-4 py-10 mx-auto w-full max-w-3xl">
@@ -95,9 +107,21 @@ const App = () => {
           <h1 className="text-2xl font-bold mb-6 text-center">
             Student Record Management System
           </h1>
-          <div className="mb-6">
-            <SearchBar setSearchTerm={setSearchTerm} />
-            <FilterDropdown setFilterStatus={setFilterStatus} />
+          <div className="flex mb-6 space-x-4 items-center">
+            <div className="flex-1">
+              <SearchBar setSearchTerm={setSearchTerm} />
+            </div>
+            <div className="flex-1">
+              <FilterDropdown setFilterStatus={setFilterStatus} />
+            </div>
+            <div className="flex-1">
+              <button
+                onClick={clearAllStudents}
+                className="w-full py-2 px-4 bg-red-600 text-white rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              >
+                Delete All Records
+              </button>
+            </div>
           </div>
           <StudentForm
             addStudent={addStudent}
@@ -115,6 +139,31 @@ const App = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+          <div className="bg-white rounded-lg p-6 shadow-lg">
+            <h2 className="text-xl font-bold mb-4">Confirm Deletion</h2>
+            <p className="mb-4">
+              Are you sure you want to delete all student data? This action
+              cannot be undone.
+            </p>
+            <div className="flex justify-end space-x-4">
+              <button
+                onClick={() => setShowModal(false)}
+                className="py-1 px-3 bg-gray-300 text-gray-700 text-sm rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmClearAllStudents}
+                className="py-1 px-3 bg-red-600 text-white text-sm rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
