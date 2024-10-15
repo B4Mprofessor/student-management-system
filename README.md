@@ -32,3 +32,60 @@ This is a student management system built with React and Vite. The application a
    ```sh
    git clone https://github.com/your-username/student-management-system.git
    cd student-management-system
+Install the dependencies:
+npm install
+
+Running the Application
+Start the development server:
+npm run dev
+
+2.Open your browser and navigate to http://localhost:3000 to see the application running.
+
+Building for Production
+To create a production build of the application, run:
+
+npm run build
+
+Previewing the Production Build
+To preview the production build locally, run:
+
+npm run preview
+
+Linting
+To lint the code, run:
+
+npm run lint
+
+Project Structure
+
+student-management-system/
+├── .gitignore
+├── 
+├── 
+├── 
+├── 
+├── public/
+├── 
+├── src/
+│   ├── 
+│   ├── App.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── FilterDropdown.jsx
+│   │   ├── 
+│   │   ├── 
+│   │   ├── StudentTable.jsx
+│   ├── 
+│   ├── styles/
+│   │   └── 
+│   ├── utils/
+│   │   └── helper.js
+├── 
+├── 
+
+Licence
+This project is licensed under the MIT Licence.
+
+### Summary
+
+This  file provides a clear and concise guide for users to set up and run your student management system application. It includes sections for prerequisites, installation, running the application, building for production, previewing the production build, linting, and the project structure.
