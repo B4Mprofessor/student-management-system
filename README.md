@@ -82,8 +82,20 @@ student-management-system/
 │   ├── styles/
 │   └── utils/
 │       └── helper.js
+```
+
+## Folder Structure
+
+- **public/**: Static assets like icons, images.
+- **src/**: Contains the core application code including components, styles, and utility functions.
+- **components/**: Includes `FilterDropdown`, `StudentForm`, `StudentTable`, and `SearchBar` for searching and filtering student data.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contributing
+
+Feel free to fork the repository and submit a pull request if you'd like to contribute to the project.
 
 
-public/: Static assets like icons, images.
-src/: Contains the core application code including components, styles, and utility functions.
-components/: Includes FilterDropdown, StudentForm, StudentTable, and SearchBar for searching and filtering student data.
