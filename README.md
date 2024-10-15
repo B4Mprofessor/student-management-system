@@ -30,37 +30,36 @@ A **Student Management System** built using **React** and **Vite**. This system 
 
 ## Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/student-management-system.git
-   cd student-management-system
-Install dependencies:
+1. Clone the repository:
+   `git clone https://github.com/your-username/student-management-system.git`
+   
+2. Navigate to the project directory:
+   `cd student-management-system`
 
-npm install
-Running the Application
-To start the development server, run:
+3. Install dependencies:
+   `npm install`
 
+## Running the Application
 
-npm run dev
-Then open your browser and navigate to http://localhost:3000 to see the application.
+Start the development server:
+`npm run dev`
 
-Building for Production
-To create an optimized production build, run:
+Then open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
+## Building for Production
 
-npm run build
-Previewing the Production Build
-To locally preview the production build, run:
+To create an optimized production build:
+`npm run build`
 
+## Previewing the Production Build
 
-npm run preview
-Linting
+To locally preview the production build:
+`npm run preview`
+
+## Linting
+
 Ensure code quality and consistency by running:
-
-
-npm run lint
-Project Structure
-plaintext
+`npm run lint`
 
 ## Project Structure
 
@@ -83,17 +82,3 @@ student-management-system/
 │   ├── styles/
 │   └── utils/
 │       └── helper.js
-
-public/: Static assets like icons, images.
-src/: Contains the core application code including components, styles, and utility functions.
-License
-This project is licensed under the MIT License.
-
-Contributing
-Feel free to fork the repository and submit a pull request if you'd like to contribute to the project.
-
-### Changes and Improvements:
-- Added a **Features** section for a quick overview of the application.
-- Enhanced formatting and added additional explanations where necessary.
-- Provided clearer descriptions and structure for the commands.
-- Included a **Contributing** section to make the project more open to collaboration.
